@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Grinched';
+  src: url('./fonts/GrinchedRegular.otf');
+}
+
+@font-face {
+  font-family: 'PartyConfetti';
+  src: url('./fonts/PartyConfetti.ttf');
+}
+
+@keyframes color {
+  0% {
+    background: #33cccc;
+  }
+  20% {
+    background: #33cc36;
+  }
+  40% {
+    background: #b8cc33;
+  }
+  60% {
+    background: #fcca00;
+  }
+  80% {
+    background: #33cc36;
+  }
+  100% {
+    background: #33cccc;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+
+  .header {
+    h1 {
+      font-family: 'Grinched';
+      display: flex;
+      justify-content: center;
+      font-size: 8vmin;
+    }
+    margin-bottom: 5vmin;
+  }
+
+  .wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  .container {
+    width: 100vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+
+    .game {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2vmin;
+
+      width: 70vmin;
+      .btn_option {
+        cursor: pointer;
+        background: #ffffff;
+        height: 22vmin;
+        width: 22vmin;
+        border-radius: 8px;
+        font-size: 12vmin;
+        color: #c850c0;
+        box-shadow: 0 0 15px rbga(0, 0, 0, 0.1);
+
+        &.win {
+          animation: color 3s infinite linear;
+        }
+
+        &:hover,
+        &.selected {
+          background: #ececec;
+        }
+        &.selected {
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .popup {
+        &.hidden {
+          display: none;
+        }
+
+        position: fixed;
+        width: 70vmin;
+        height: 70vmin;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.25);
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 70vmin;
+          color: #eeff52;
+        }
+      }
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      gap: 2vmin;
+      width: 28vmin;
+      height: 70vmin;
+
+      .title {
+        font-family: 'Grinched';
+        font-size: 3vmin;
+        line-height: 3vmin;
+        padding-top: 1vmin;
+        height: 5vmin;
+        text-align: center;
+        text-transform: uppercase;
+
+        .current_player {
+          font-family: 'Grinched';
+          color: rgba(255, 0, 0, 0.75);
+        }
+      }
+
+      .message {
+        .last_moves {
+          height: 36vmin;
+          background: #ffffff;
+          border-radius: 8px;
+          border: 1px #000000 solid;
+          box-shadow: 0 0 15px rbga(0, 0, 0, 0.1);
+
+          p {
+            font-family: 'PartyConfetti';
+            font-size: 2vmin;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2vmin;
+        height: 24vmin;
+        align-items: center;
+        justify-content: end;
+        .btn {
+          width: 100%;
+          cursor: pointer;
+          font-family: 'Grinched';
+          font-size: 4vmin;
+          padding: 1vmin 3vmin;
+          border-radius: 8px;
+          background: #33cc36;
+          &:hover {
+            background: hsla(121, 60%, 50%, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

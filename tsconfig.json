@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "sourceMap": false,
+    "lib": ["DOM", "ES5"],
+    "outDir": "./",
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": ["**.ts", "src/tictactoe.ts"],
+  "exclude": ["node_modules"]
+}
