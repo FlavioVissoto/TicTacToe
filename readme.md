@@ -1,8 +1,8 @@
 # Tic Tac Toe - Jogo da Velha
 
 <div align="center">
-    <img src="https://github.com/FlavioVissoto/TicTacToe/blob/master/src/assets/img/screenshot_01.png" alt="Tela Jogo da Velha" width="50%" />
-    <img src="https://github.com/FlavioVissoto/TicTacToe/blob/master/src/assets/img/screenshot_02.png" alt="Tela Jogo da Velha" width="50%" />
+    <img src="https://github.com/FlavioVissoto/TicTacToe/blob/master/src/assets/img/screenshot_01.png" alt="Tela Jogo da Velha" width="49.5%" />
+    <img src="https://github.com/FlavioVissoto/TicTacToe/blob/master/src/assets/img/screenshot_02.png" alt="Tela Jogo da Velha" width="49.5%" />
 </div>
 </br>
 
